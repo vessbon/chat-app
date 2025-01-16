@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Register</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/authentication.css') }}">
+{% endblock %}
+
+{% block body %}
+<header class="ac-header">
+  <h1 class="credential-title">Register</h1>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+<main class="ac-main register">
+  <form class="ac-form" action="/register" method="post">
+    <label for="email">
+      <i class="fa-solid fa-envelope"></i>
+    </label>
+    <input type="email" name="email" placeholder="Email" id="email" required>
+
+    <label for="password">
+      <i class="fas fa-lock"></i>
+    </label>
+    <input type="password" name="password" placeholder="Password" id="password" required>
+    
+    <input type="submit" value="Register">
+  </form>
+</main>
+
+<footer class="ac-footer">Copyright &copy; 2024 by Anton Norgren</footer>
+{% endblock %}
